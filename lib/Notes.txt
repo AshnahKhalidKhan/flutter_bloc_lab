@@ -1,3 +1,47 @@
 - Business Logic Component - BLoC
 - Have to write more code than Riverpod or Prodivder, but makes business logic simple
-- Event: a change/action
+- Event: info about action
+- State: reaction to info given by action
+- UI (throws events), Bloc (throws states), Repository, Data Source
+- Any function with async will always return Future
+- Flutter is single-threaded
+
+-
+UI/Presentation sends event to Bloc
+Bloc sends async request to Data
+(Behind Data, there will be Repository)
+Data returns async response to Bloc
+Bloc returns states to UI/Presentation
+
+- Streamcontroller used for getting continuously updated data (e.g. stock market values)
+- http, equatable
+- fromJosn method used to convert JSON to Dart
+- toJson method used to convert Dart to Json
+- Convert string to JSON to Dart
+- Make API file separate because makes testign and changing easy
+- Repository takes data from Data Stroage and gives to Bloc
+- ApiClients can be different in different repositories but each respository will be in same User_repo.dart file.
+
+- user_events.dart:
+    Equatable used to render state ONLY when event changes.
+    UserEvent is an abstract class (cannot define its instance, but used to define same traits uniquely for each class).
+
+- user_states.dart:
+    UserState is an abstract class.
+    Total states: empty, success (loaded), error, loading; these will all be separate classes extending UserState
+
+- user_bloc.dart:
+    UserBloc extends Bloc<UserEvent, UserState>.
+    Has instance of UserRepository.
+
+- TDD is writing where function will be called and then defining function later.
+
+- user_page.dart:
+    initState should be defined.
+    FetchUser() is the event.
+    Blockbuilder builds/renders widget for each state
+
+- Must wrap main app into BlockProvider
+
+- Folders: bloc > user_events.dart+user_states.dart+user_bloc.dart, core > network.dart + respository > user_repo.dart, models > user_model.dart, page
+
