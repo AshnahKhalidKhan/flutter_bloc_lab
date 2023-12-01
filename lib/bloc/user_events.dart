@@ -18,3 +18,11 @@ class FetchUser extends UserEvent
   @override
   List<Object?> get props => throw UnimplementedError();
 }
+
+class FetchProducts extends UserEvent
+{
+  const FetchProducts() : super();
+  
+  @override
+  List<Object?> get props => throw UnimplementedError();
+}

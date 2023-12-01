@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc_lab/core/network.dart';
 import 'package:flutter_bloc_lab/core/repository/user_repo.dart';
+import 'package:flutter_bloc_lab/page/challenge_page.dart';
 import 'package:flutter_bloc_lab/page/user_page.dart';
 import 'package:http/http.dart' as http;
 
@@ -40,10 +41,14 @@ class MainApp extends StatelessWidget
       //     child: Text('Hello World!'),
       //   ),
       // ),
-      home: UserPage
+      // home: UserPage
+      // (
+      //   userRepository: userRepository
+      // ),
+      home: ChallengePage
       (
-        userRepository: userRepository
-      ),
+        userRepository: userRepository,
+      )
     );
   }
 }
