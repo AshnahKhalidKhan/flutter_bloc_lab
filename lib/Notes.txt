@@ -1,1 +1,3 @@
-Business Logic Component - BLoC
+- Business Logic Component - BLoC
+- Have to write more code than Riverpod or Prodivder, but makes business logic simple
+- Event: 
