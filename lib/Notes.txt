@@ -78,3 +78,15 @@ Functional testing
     Pixel test failed: UI not matching
 
 - Must generate test report
+
+- Final exam: 
+3 questions, 
+create UI, 
+statemenagement(Riverpod/Bloc up to us) and firebase connected BEFORE coming into exam, 
+screenshot submissions will be counted as submission, 
+Flutter widgets question will be mushkil
+
+- Project marks:
+Proper testing
+Proper UI
+Implement things we haven't even studied

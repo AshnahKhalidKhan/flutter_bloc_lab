@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class name extends StatelessWidget 
+class TestPage extends StatelessWidget 
 {
-  const name({super.key});
+  const TestPage({super.key});
 
   @override
   Widget build(BuildContext context) 
@@ -20,15 +20,27 @@ class name extends StatelessWidget
           itemCount: 5,
           itemBuilder: (context, index)
           {
-            return ListTile
-            (
-              leading: Icon(Icons.person),
-              title: Text('First Text'),
-              subtitle: Text('Second Text'),
-            );
+            // return ListTile
+            // (
+            //   leading: Icon(Icons.person),
+            //   title: Text('First Text'),
+            //   subtitle: Text('Second Text'),
+            // );
+            return SpecialWidget();
           }
         ),
       ),
     );
   }
 }
+
+Widget SpecialWidget()
+{
+  return ListTile
+  (
+    leading: Icon(Icons.person),
+    title: Text('First Text'),
+    subtitle: Text('Second Text'),
+  );
+} 
+
