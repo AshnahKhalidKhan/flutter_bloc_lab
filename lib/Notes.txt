@@ -45,3 +45,36 @@ Bloc returns states to UI/Presentation
 
 - Folders: bloc > user_events.dart+user_states.dart+user_bloc.dart, core > network.dart + respository > user_repo.dart, models > user_model.dart, page
 
+- Developer's testing responsibilities:
+Develops business logic
+Write test cases alongside writing code
+You will get to know new arising errors in previous features when new feature added
+Unit testing: wrote class, ensure it is working properly; beckend system not integrated, uses mock data
+Widget testing: done on widget, ensuring UI works/displayed properly on different screen sizes; beckend system not integrated, uses mock data
+Integration test: run like someone is using app, backend is connected
+
+- QA's testing responsibilities:
+Ensures quality of app
+Functional testing
+
+- Selenium does automated testing in web
+
+- Test files should end with _test.dart
+- testWidget:
+    descripton: Tescase ka naam; tells what the test is for
+    pumpWidget: awaits until UI is rendered
+    pumpAndSettle: awaits until UI is rendered and all asyncs inside it are rendered as well
+
+- Golden Toolkit package
+
+- Golden test/Screenshot testing:
+    tell which devices to check on,
+    tell which widget to test on and you can add multiple of these and give each test a name
+    pumpDeviceBuilder: builds app on device
+
+- Run flutter test --update--goldens <Give file path>
+    This will not give us Text because Material fonts not loaded
+    This is why loadAppFonts is used
+    Pixel test failed: UI not matching
+
+- Must generate test report
