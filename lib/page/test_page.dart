@@ -34,13 +34,19 @@ class TestPage extends StatelessWidget
   }
 }
 
-Widget SpecialWidget()
+class SpecialWidget extends StatelessWidget 
 {
-  return ListTile
-  (
-    leading: Icon(Icons.person),
-    title: Text('First Text'),
-    subtitle: Text('Second Text'),
-  );
-} 
+  const SpecialWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) 
+  {
+    return ListTile
+    (
+      leading: Icon(Icons.person),
+      title: Text('First Text'),
+      subtitle: Text('Second Text'),
+    );
+  }
+}
 

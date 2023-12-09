@@ -18,8 +18,8 @@ class UserRepository
     return userApiClient.fetchuser();
   }
 
-  Future<List<Products>> getProducts() async
-  {
-    return userApiClient.fetchproducts();
-  }
+  // Future<List<Products>> getProducts() async
+  // {
+  //   return userApiClient.fetchproducts();
+  // }
 }

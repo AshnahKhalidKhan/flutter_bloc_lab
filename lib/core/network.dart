@@ -31,22 +31,22 @@ class UserApiClient
     return itemsList;
   }
 
-  Future<List<Products>> fetchproducts() async 
-  {
-    final userResponse = await httpClient.get(Uri.parse('https://dummyjson.com/products'));
+  // Future<List<Products>> fetchproducts() async 
+  // {
+  //   final userResponse = await httpClient.get(Uri.parse('https://dummyjson.com/products'));
 
-    if (userResponse.statusCode != 200) 
-    {
-      throw Exception('Error');
-    }
-    List<dynamic> parsedListJson = jsonDecode(userResponse.body)['products'];
+  //   if (userResponse.statusCode != 200) 
+  //   {
+  //     throw Exception('Error');
+  //   }
+  //   List<dynamic> parsedListJson = jsonDecode(userResponse.body)['products'];
 
-    List<Products> itemsList = List<Products>.from
-    (
-      parsedListJson.map<Products>((dynamic i) => Products.fromJson(i))
-    );
-    return itemsList;
-  }
+  //   List<Products> itemsList = List<Products>.from
+  //   (
+  //     parsedListJson.map<Products>((dynamic i) => Products.fromJson(i))
+  //   );
+  //   return itemsList;
+  // }
 }
 
 class Endpoints 

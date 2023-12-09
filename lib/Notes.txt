@@ -90,3 +90,11 @@ Flutter widgets question will be mushkil
 Proper testing
 Proper UI
 Implement things we haven't even studied
+
+- API does not include testing; your code should work with and without internet both or else you have not realized the cocnept of testing; your code should give the same result even if you are on earth and if you are on Mars
+
+- Flutter does not have interface; so we use classes
+
+- Bloc testing is a must for project; don't do screenshot testing; if you do integration tests then you get bonus marks
+
+- 60% testing is sufficient; red lines means write tests for these

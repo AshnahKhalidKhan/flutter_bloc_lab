@@ -17,16 +17,16 @@ class UserBloc extends Bloc<UserEvent, UserState>
   )
   : super(UserLoading())
   {
-    // on<FetchUser> ((event, emit) async
-    // {
-    //   await _getUser(emit);
-    // },
-    // );
-    on<FetchProducts> ((event, emit) async
+    on<FetchUser> ((event, emit) async
     {
       await _getUser(emit);
     },
     );
+    // on<FetchProducts> ((event, emit) async
+    // {
+    //   await _getUser(emit);
+    // },
+    // );
   }
 
   Future<void> _getUser(Emitter<UserState> emit) async
@@ -34,8 +34,8 @@ class UserBloc extends Bloc<UserEvent, UserState>
     emit(UserLoading());
     try
     {
-      // final List<User> user =  await userRepository.getUser();
-      final List<Products> user = await userRepository.getProducts();
+      final List<User> user =  await userRepository.getUser();
+      // final List<Products> user = await userRepository.getProducts();
       emit(UserLoaded(user: user));
     }
     catch (e)
