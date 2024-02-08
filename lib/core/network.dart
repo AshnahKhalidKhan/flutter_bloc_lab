@@ -3,6 +3,12 @@ import 'package:flutter_bloc_lab/model/product_model.dart';
 import 'package:flutter_bloc_lab/model/user_model.dart';
 import 'package:http/http.dart' as http;
 
+class Endpoints 
+{
+  static const baseUrl = 'https://jsonplaceholder.typicode.com';
+  static const String userUrl = '$baseUrl/todos';
+}
+
 class UserApiClient 
 {
   final http.Client httpClient;
@@ -47,10 +53,4 @@ class UserApiClient
   //   );
   //   return itemsList;
   // }
-}
-
-class Endpoints 
-{
-  static const baseUrl = 'https://jsonplaceholder.typicode.com';
-  static const String userUrl = '$baseUrl/todos';
 }

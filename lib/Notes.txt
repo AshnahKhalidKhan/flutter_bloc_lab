@@ -72,7 +72,7 @@ Functional testing
     tell which widget to test on and you can add multiple of these and give each test a name
     pumpDeviceBuilder: builds app on device
 
-- Run flutter test --update--goldens <Give file path>
+- Run this command: flutter test --update--goldens <Give file path>
     This will not give us Text because Material fonts not loaded
     This is why loadAppFonts is used
     Pixel test failed: UI not matching
